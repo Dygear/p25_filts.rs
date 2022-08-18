@@ -5,8 +5,8 @@ extern crate static_fir;
 
 use num::complex::Complex32;
 
-/// FIR filter approximating the frequency response of the "Nyquist Raised Cosine"
-/// impulse shaping filter described in the P25 standard.
+// FIR filter approximating the frequency response of the "Nyquist Raised Cosine"
+// impulse shaping filter described in the P25 standard.
 impl_fir!(RaisedCosineFir, f32, 121, [
     -0.0000000000000000,
     -0.0002914178875877,
@@ -131,8 +131,8 @@ impl_fir!(RaisedCosineFir, f32, 121, [
     -0.0000000000000000,
 ]);
 
-/// FIR filter approximating the frequency response of the "Shaping" preemphasis
-/// filter described in the P25 standard.
+// FIR filter approximating the frequency response of the "Shaping" preemphasis
+// filter described in the P25 standard.
 impl_fir!(PreemphFir, f32, 39, [
     -0.0178961626433530,
     0.0346928432330632,
@@ -175,8 +175,8 @@ impl_fir!(PreemphFir, f32, 39, [
     -0.0178961626433530,
 ]);
 
-/// Lowpass FIR filter with passband to 4kHz and stopband after 24kHz for
-/// antialiasing when decimating from 240kHz to 48kHz sample rate.
+// Lowpass FIR filter with passband to 4kHz and stopband after 24kHz for
+// antialiasing when decimating from 240kHz to 48kHz sample rate.
 impl_fir!(DecimFir, Complex32, 41, [
     0.000786541581019716,
     0.000597016981378991,
@@ -221,8 +221,8 @@ impl_fir!(DecimFir, Complex32, 41, [
     0.000786541581019716,
 ]);
 
-/// Lowpass FIR filter with stopband after 5kHz for rejecting spectrum outside
-/// 6.25kHz P25 sidebands.
+// Lowpass FIR filter with stopband after 5kHz for rejecting spectrum outside
+// 6.25kHz P25 sidebands.
 impl_fir!(BandpassFir, Complex32, 65, [
     -0.000688950539173326,
     -0.000271272708869335,
@@ -294,7 +294,7 @@ impl_fir!(BandpassFir, Complex32, 65, [
 #[cfg(test)]
 mod test {
     use super::*;
-    use static_fir::FirCoefs;
+    use static_fir::FIRCoefs;
 
     #[test]
     fn verify_symmetry() {

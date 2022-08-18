@@ -1,4 +1,5 @@
 extern crate num;
+use self::num::Zero;
 
 #[macro_use]
 extern crate static_fir;

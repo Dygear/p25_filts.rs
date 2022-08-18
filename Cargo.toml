@@ -1,6 +1,6 @@
 [package]
 name = "p25_filts"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Mick Koch <mick@kochm.co>", "Mark Tomlin <Dygear@gmail.com"]
 
 [dependencies]
